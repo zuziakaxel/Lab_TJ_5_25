@@ -126,10 +126,73 @@ OCENA:\\
 \section{Wyniki pomiarów i obliczenia.}
 
 \subsection{Wyznaczenie objętości i gęstości badanych próbek.}
-Przy pomocy linijki zmierzono wymiary geometryczne badanych próbek wyniki pomiarów i obliczeń przedstawiono w tabeli \ref{geometryczne}.
+Przy pomocy linijki zmierzono wymiary geometryczne badanych próbek. Wyniki pomiarów i obliczeń przedstawiono w tabeli \ref{wynikiW}.
+
+\begin{table}[h!]
+\centering
+\label{wynikiW}
+\caption{Wymiary geometryczne próbek wzorcowych.}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}\hline
+	Próbka & Waga [g] & Objętość [cm$^3$] & Zawartość $H$ [\%] \\ \hline
+		W7	&	298,4	&	346,40	&	15,1 \\ \hline
+		W6	&	436,25	&	361,28	&	8,89 \\ \hline
+		W5	&	414,5	&	345,58	&	8,08 \\ \hline
+		W4	&	478,44	&	338,70	&	6,42 \\ \hline
+		W3	&	538,28	&	346,40	&	5,45 \\ \hline
+		W2	&	434,46	&	337,72	&	2,05 \\ \hline
+		W1	&	766,3	&	361,28	&	0 \\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\label{wynikiP}
+\caption{Wymiary geometryczne badanych próbek}
+\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}\hline
+	Próbka & Waga [g] & Objętość V [cm$^3$] & U(V) [cm$^3$] \\ \hline
+		P1	&	181,31	&	331,89	&	10,14 \\ \hline
+		P2	&	371,6	&	345,58	&	10,46  \\ \hline
+		P3	&	511,34	&	345,58	&	10,46 \\ \hline
+		P4	&	590,2	&	310,37	&	9,78 \\ \hline
+		P5	&	593,58	&	338,70	&	10,30 \\ \hline
+		P6	&	416,6	&	346,40	&	10,40 \\ \hline
+		P7	&	439,47	&	361,28	&	10,67 \\ \hline
+
+\end{tabular}
+
+\end{table}
+\newpage
+\subsection{Cechowanie neutronowego miernika wodoru}
+Do otrzymanych wyników (tabela \ref{cechowanie_tab}) dopasowano prostą metodą regresji korzystając z programu Gnuplot:
+\begin{equation}
+	J = a_0 + a_1\rho_H
+\end{equation}
+ Otrzymano wartości:
+ \begin{equation*}
+ 	a_1 = 430112 \pm 1,451\cdot 10^4
+ \end{equation*}
+ \begin{equation*}
+ 	a_0 = 9487,86 \pm 1273
+ \end{equation*}
+Zatem otrzymana krzywa cechowania przyjmuje postać:
+\begin{equation*}
+	J = 430112\rho_H + 94,87,86
+\end{equation*}
+
+
+
+\begin{figure}[h!]
+	\fontsize{6}{8}\selectfont % zmniejszam czcionke
+	\centering
+	\resizebox{1.0\textwidth}{!}{\input{cechowanie.tex}}	
+	\caption{Krzywa cechowania neutronowego miernika wodoru}
+	\label{krzywa}
+\end{figure}
+
 
 %%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
-
+\newpage
 \begin{thebibliography}{9}
 	
 	
