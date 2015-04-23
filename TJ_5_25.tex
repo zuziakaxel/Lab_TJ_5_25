@@ -111,7 +111,22 @@ OCENA:\\
 %-----Koniec tabeli------
 
 %%%%%%%%%%%% Wstęp %%%%%%%%%%%%
+\section{Cel ćwiczenia}
+Celem ćwiczenia jest wyznaczenie zawartości procentowej wodoru w badanej próbce metodą neutronową. Przybliżenie zagadnienia detekcji neutronów oraz ich oddziaływania z materią.
 \section{Wstęp teoretyczny}
+Ideą ćwiczenia jest wykorzystanie faktu, że wodór jest wyjątkowo dobrym spowalniaczem neutronów (neutrony tracą przy zderzeniu centralnym prawie 100\% swojej energii kinetycznej), ze względu na zbliżone masy atomu wodoru oraz neutronu. Jeżeli na próbke będą padały jedynie neutrony prędkie to strumień neutronów termicznych po przejściu przez próbkę będzie proporcjonalny do gęstości atomów wodoru w badanym materiale. \\
+
+Jako źródło neutronów wykorzystuję się źródło Pu-Be, gdzie pluton jest emiterem cząstek alfa, 
+które następnie ulegają reakcji z jądrami berylu, który ma niską energię separacji neutronu.\\
+\[^9_4\text{Be }(\alpha,n)\ ^{12}_6\text{C}\]
+Neutrony powstałe w powyższej reakcji mają różne prędkości, natomiast w doświadczeniu potrzebny jest jedynie strumień neutronów prędkich. W tym celu pomiędzy źródłem a badaną próbką umieszcza się osłonę kadmową. Kadm wykazuję szczególnie duży przekrój czynny na absorpcję neutronów termicznych i przekrój ten gwałtownie maleje dla wyższych energii, dzięki czemu pełni ona rolę filtra przepuszczającego jedynie neutrony o większej energii.\\\\
+Kolejnym celem na drodze strumienia neutronów jest już badana próbka. Jak wspomniano powyżej wodór ze względu na praktycznie identyczną masę z masą neutronu bardzo wydajnie je spowalnia. W praktyce większość neutronów spowolnionych przez próbkę jest wynikiem ich oddziaływania z jądrami wodoru, dzięki czemu możemy szukać korelacji pomiędzy ilością zliczeń neutronów termicznych w detektorze, a gęstościa wodoru w badanej próbce (ponieważ przekrój czynny na oddziaływanie neutronów z jądrami wodoru w głównej mierze zależy od jego gęstości). \\\\
+Przed przystąpieniem do wyznaczania nieznanej zawartości wodoru należy wyznaczyć prostą korelacji częstości zliczeń od znanej zawartości wodoru w próbkach wzorcowych. W tym celu do punktów pochodzących z próbek wzorcowych wystarczy dopasować prostą na przykład metodą najmniejszych kwadratów.\\\\
+W końcu po przejściu przez próbkę neutrony wpadają do detektora. W doświadczeniu jako detektora użyto licznika proporcjonalnego z dodatkiem gazowego BF$_3$.
+
+
+
+
 \section{Aparatura i wykonanie ćwiczenia}
 \begin{itemize}
 	\item \textbf{Neutronowy miernik wodoru}
@@ -170,14 +185,14 @@ Do otrzymanych wyników (tabela \ref{cechowanie_tab}) dopasowano prostą metodą
 \end{equation}
  Otrzymano wartości:
  \begin{equation*}
- 	a_1 = 430112 \pm 1,451\cdot 10^4
+ 	a_1 = 43,0112 \pm 1,451\cdot 10^4
  \end{equation*}
  \begin{equation*}
  	a_0 = 9487,86 \pm 1273
  \end{equation*}
 Zatem otrzymana krzywa cechowania przyjmuje postać:
 \begin{equation*}
-	J = 430112\rho_H + 94,87,86
+	J = 430112\rho_H + 9487,86
 \end{equation*}
 
 
