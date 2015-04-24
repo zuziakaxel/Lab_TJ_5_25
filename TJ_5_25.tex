@@ -120,9 +120,17 @@ Jako źródło neutronów wykorzystuję się źródło Pu-Be, gdzie pluton jest 
 które następnie ulegają reakcji z jądrami berylu, który ma niską energię separacji neutronu.\\
 \[^9_4\text{Be }(\alpha,n)\ ^{12}_6\text{C}\]
 Neutrony powstałe w powyższej reakcji mają różne prędkości, natomiast w doświadczeniu potrzebny jest jedynie strumień neutronów prędkich. W tym celu pomiędzy źródłem a badaną próbką umieszcza się osłonę kadmową. Kadm wykazuję szczególnie duży przekrój czynny na absorpcję neutronów termicznych i przekrój ten gwałtownie maleje dla wyższych energii, dzięki czemu pełni ona rolę filtra przepuszczającego jedynie neutrony o większej energii.\\\\
-Kolejnym celem na drodze strumienia neutronów jest już badana próbka. Jak wspomniano powyżej wodór ze względu na praktycznie identyczną masę z masą neutronu bardzo wydajnie je spowalnia. W praktyce większość neutronów spowolnionych przez próbkę jest wynikiem ich oddziaływania z jądrami wodoru, dzięki czemu możemy szukać korelacji pomiędzy ilością zliczeń neutronów termicznych w detektorze, a gęstościa wodoru w badanej próbce (ponieważ przekrój czynny na oddziaływanie neutronów z jądrami wodoru w głównej mierze zależy od jego gęstości). \\\\
+Kolejnym punktem na drodze strumienia neutronów jest już badana próbka. Jak wspomniano powyżej wodór ze względu na praktycznie identyczną masę z masą neutronu bardzo wydajnie je spowalnia. W praktyce większość neutronów spowolnionych przez próbkę jest wynikiem ich oddziaływania z jądrami wodoru, dzięki czemu możemy szukać korelacji pomiędzy ilością zliczeń neutronów termicznych w detektorze, a gęstościa wodoru w badanej próbce (ponieważ przekrój czynny na oddziaływanie neutronów z jądrami wodoru w głównej mierze zależy od  gęstości H). \\\\
 Przed przystąpieniem do wyznaczania nieznanej zawartości wodoru należy wyznaczyć prostą korelacji częstości zliczeń od znanej zawartości wodoru w próbkach wzorcowych. W tym celu do punktów pochodzących z próbek wzorcowych wystarczy dopasować prostą na przykład metodą najmniejszych kwadratów.\\\\
-W końcu po przejściu przez próbkę neutrony wpadają do detektora. W doświadczeniu jako detektora użyto licznika proporcjonalnego z dodatkiem gazowego BF$_3$.
+Po przejściu przez próbkę neutrony wpadają do detektora. W doświadczeniu jako detektora użyto licznika proporcjonalnego z dodatkiem gazowego BF$_3$. Detekcja neutronów sprawia pewne problemy, ponieważ nie jonizują one materii. Obejściem tego problemu jest właśnie dodatek trójfluorku boru. Bor posiada duży przekrój czynny na absorpcję neutronów termicznych (neutrony termiczne są też lepiej absorpowane ze względu na regułę $1/v$, mówiącej że przekrój czynny na oddziaływanie z neutronami jest odwrotnie proporcjonalny do ich prędkości). \\\\
+W detektorze zachodzi reakcja przedstawiona na Rysunku \ref{rozpad_boru}. Jak widać z powyższego rysunku reakcja ma dwa kanały rozpadu, dzięki czemu obserwujemy dwa piki przesunięte względem siebie o około 0,48 MeV. Cząstki alfa oraz jądra litu jonizują dalej materię co prowadzi do wytworzenia impulsu elektrycznego, który następnie jest wzmacniany i przy pomocy analizatora oraz przelicznika zliczany.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/rozpad_boru.png}
+	\caption{Reakcja rozpadu boru pod wpływem absorpcji neutronu termicznego.\cite{DzK}}
+	\label{rozpad_boru}
+\end{figure}
 
 
 
@@ -136,7 +144,8 @@ W końcu po przejściu przez próbkę neutrony wpadają do detektora. W doświad
 	\item \textbf{Przelicznik}
 \end{itemize}
 
-Ćwiczenie rozpoczęto od zapoznania się z aparaturą pomiarową. Przed przystąpieniem do wykonywania pomiarów zmierzono wszystkie wymiary geometryczne zarówno próbek wzorcowych: $W1,W2,...W7$ jak i tych, dla których wyznaczano gęstość wodoru: $P1,P2,...P7$. Zanotowano wagi poszczególnych próbek. Wykonano pomiary przy pomocy neutronowego miernika wodoru dla wszystkich próbek.
+Ćwiczenie rozpoczęto od zapoznania się z aparaturą pomiarową. Przed przystąpieniem do wykonywania pomiarów zmierzono wszystkie wymiary geometryczne zarówno próbek wzorcowych: $W1,W2,...W7$ jak i tych, dla których wyznaczano gęstość wodoru: $P1,P2,...P7$. Zanotowano wagi poszczególnych próbek. Następnie rozpoczęto pomiary częstości detekcji neutronów termicznych dla siedmiu próbek wzorcowych, ustawiając czas detekcji na 100s. Wyniki przedstawiono w tabeli \ref{tabela_czestosci}. \\
+Po zbadaniu próbek wzorcowych analogicznie zmierzono siedem próbek badanych. Wyniki przedstawiono w tabeli \ref{tabela_czestosci} oraz na wykresie (Rysunek \ref{krzywa}).
 
 \section{Wyniki pomiarów i obliczenia.}
 
@@ -179,21 +188,28 @@ Przy pomocy linijki zmierzono wymiary geometryczne badanych próbek. Wyniki pomi
 \end{table}
 \newpage
 \subsection{Cechowanie neutronowego miernika wodoru}
-Do otrzymanych wyników (tabela \ref{cechowanie_tab}) dopasowano prostą metodą regresji korzystając z programu Gnuplot:
+Do otrzymanych wyników dla próbek wzorcowych (tabela \ref{tabela_czestosci}) dopasowano prostą metodą regresji korzystając z programu Gnuplot:
 \begin{equation}
 	J = a_0 + a_1\rho_H
 \end{equation}
  Otrzymano wartości:
  \begin{equation*}
- 	a_1 = 43,0112 \pm 1,451\cdot 10^4
+ 	a_1 = 43,0 \pm 1,5\cdot 10^4
  \end{equation*}
  \begin{equation*}
- 	a_0 = 9487,86 \pm 1273
+ 	a_0 = 9500 \pm 1300
  \end{equation*}
 Zatem otrzymana krzywa cechowania przyjmuje postać:
 \begin{equation*}
-	J = 430112\rho_H + 9487,86
+	J = 430000\rho_H + 9500
 \end{equation*}
+Następnie przekształcono powyższe równanie do postaci\\
+\[\rho _H = \frac{J-a_0}{a_1} = \frac{J-9500}{430000}
+\]
+po czy na podstawie tego równania oraz wyników częstości dla badanych próbek (tabela \ref{tabela_czestosci}) policzono gęstości wodoru. \\
+Chcąc policzyć zawartość procentową wodoru pomnożono otrzymane gęstości przez objętość próbki, a następnie podzielono przez jej masę. Do wyznaczenia niepewności korzystano z prawa przenoszenia niepewności:
+\[u(\rho _H) = \sqrt{ \Bigg[ \frac{-u(a_0)}{a_1} \Bigg]^2 + \Bigg[ \frac{-(J-a_0)}{a_1^2}u(a_1) \Bigg]^2 }
+\]
 
 
 
