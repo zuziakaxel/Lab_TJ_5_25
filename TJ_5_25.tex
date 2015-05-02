@@ -186,6 +186,36 @@ Przy pomocy linijki zmierzono wymiary geometryczne badanych próbek. Wyniki pomi
 \end{tabular}
 
 \end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Tabela zawierająca liczbę zliczeń w czasie 100s, a także odpowiednie wartości gęstości oraz stężenia wodoru w danej próbce.}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Próbka & Liczba zliczeń $N$ & Gęstość $\rho _H$ & $u(\rho _H)$ & Stężenie $c$ [\%] & $u(c)$ [\%] \\\hline
+		W7 & 65035 & 0.1300 & - & 15.10 & - \\\hline 
+		W6 & 56688 & 0.1073 & - & 8.89 & - \\\hline 
+		W5 & 52691 & 0.0969 & - & 8.08 & - \\\hline 
+		W4 & 48084 & 0.0906 & - & 6.42 & - \\\hline 
+		W3 & 44622 & 0.0846 & - & 5.45 & - \\\hline 
+		W2 & 18598 & 0.0263 & - & 2.05 & - \\\hline 
+		W1 & 11276 & 0.0000 & - & 0.00 & - \\\hline 
+		 & & & & & \\\hline
+		P1 & 20634 & 0.0259 & 0.0031 & 4.74 & 0.58 \\\hline 
+		P2 & 55253 & 0.1064 & 0.0047 & 9.90 & 0.53 \\\hline 
+		P3 & 15683 & 0.0144 & 0.0030 & 0.97 & 0.21 \\\hline 
+		P4 & 14594 & 0.0119 & 0.0030 & 0.62 & 0.16 \\\hline 
+		P5 & 15017 & 0.0129 & 0.0030 & 0.73 & 0.17 \\\hline 
+		P6 & 52814 & 0.1007 & 0.0045 & 8.38 & 0.45 \\\hline 
+		P7 & 56700 & 0.1098 & 0.0047 & 9.02 & 0.47 \\\hline 
+		
+		
+	\end{tabular}
+	\label{tabela_czestosci}
+\end{table}
+
+
+
 \newpage
 \subsection{Cechowanie neutronowego miernika wodoru}
 Do otrzymanych wyników dla próbek wzorcowych (tabela \ref{tabela_czestosci}) dopasowano prostą metodą regresji korzystając z programu Gnuplot:
@@ -209,7 +239,22 @@ Następnie przekształcono powyższe równanie do postaci\\
 po czy na podstawie tego równania oraz wyników częstości dla badanych próbek (tabela \ref{tabela_czestosci}) policzono gęstości wodoru. \\
 Chcąc policzyć zawartość procentową wodoru pomnożono otrzymane gęstości przez objętość próbki, a następnie podzielono przez jej masę. Do wyznaczenia niepewności korzystano z prawa przenoszenia niepewności:
 \[u(\rho _H) = \sqrt{ \Bigg[ \frac{-u(a_0)}{a_1} \Bigg]^2 + \Bigg[ \frac{-(J-a_0)}{a_1^2}u(a_1) \Bigg]^2 }
-\]
+\]\\
+
+\noindent
+Obliczone wartości umieszczono w tabeli \ref{tabela_czestosci}.\\\\
+Mając gęstość wodoru w badanej próbce oraz jej wymiary geometryczne i masę, możemy wyznaczyć zawartość 
+procentową wodoru $c$ ze wzoru:
+\begin{equation}
+c = \frac{\rho _H V}{m}
+\end{equation}
+Natomiast niepewność z prawa przenoszenia niepewności pomiarowej:
+\begin{equation}
+u(c) = \sqrt{ \Big[ \frac{V}{m}u(\rho _H) \Big]^2 + \Big[ \frac{\rho _H}{m}u(V) \Big]^2}
+\end{equation}\\\\\\
+
+Jak widać z Rysunku \ref{krzywa}, częstość zliczeń jest skorelowana z zawartością wodoru, dzięki czemu metoda ta pozwala na wyznaczenie wilgotnośći materiału (należy pamiętać o odjęciu stałej gęstości wodoru dla danego materiału nie będącego składnikiem wody). Dodatkowo dokładniejsze pomiary wielkości próbki, a także większa ilość próbek wzorcowych mogą poprawić dokładność tej metody.
+
 
 
 
@@ -235,9 +280,9 @@ Chcąc policzyć zawartość procentową wodoru pomnożono otrzymane gęstości 
 	B. Dziunikowski, S.J. Kalita
 	\emph{Ćwiczenia laboratoryjne z jądrowych metod pomiarowcyh}, Wydawnictwa AGH, Kraków 1995
 	
-	\bibitem{przybycien}
-	Mariusz Przybycień \emph{Tablice Statystyczne}, dostęp on-line\\
-	\url{http://home.agh.edu.pl/~mariuszp/wfiis_stat/tablice_ps_wir.pdf}
+	%\bibitem{przybycien}
+	%Mariusz Przybycień \emph{Tablice Statystyczne}, dostęp on-line\\
+	%\url{http://home.agh.edu.pl/~mariuszp/wfiis_stat/tablice_ps_wir.pdf}
 \end{thebibliography}
 \vspace{2cm}
 
